@@ -6,3 +6,5 @@
 	path = ~/.gitconfig.favo
 [core]
 	editor = vim
+[init]
+	defaultBranch = main

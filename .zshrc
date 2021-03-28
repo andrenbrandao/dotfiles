@@ -87,6 +87,7 @@ plugins=(
 	colored-man-pages
 	fasd
 	tmux
+	mongocli
 )
 
 source $ZSH/oh-my-zsh.sh
