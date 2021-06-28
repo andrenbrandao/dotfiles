@@ -2,8 +2,6 @@
 	name = André Brandão
 	email = andrenbrandao@gmail.com
 
-[includeIf "gitdir:~/dev/favo/"]
-	path = ~/.gitconfig.favo
 [core]
 	editor = vim
 [init]
