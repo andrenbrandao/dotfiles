@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$PATH:/usr/local/go/bin:/home/andrebrandao/.local/bin
+export PATH=$PATH:/usr/local/go/bin:/home/andrebrandao/go/bin:/home/andrebrandao/.local/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
