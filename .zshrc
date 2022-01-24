@@ -127,6 +127,10 @@ export PATH=$PATH:/usr/local/go/bin:/home/andrebrandao/go/bin:/home/andrebrandao
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 
+# Add Android Studio
+export PATH="/usr/local/android-studio/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
