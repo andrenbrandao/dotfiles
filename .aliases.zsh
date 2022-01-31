@@ -18,4 +18,5 @@ function video2gif() {
 alias gprunesquashmerged='git checkout -q "$(git_main_branch)" && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base "$(git_main_branch)" $branch) && [[ $(git cherry "$(git_main_branch)" $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 
 # say (to use with mob programming script)
-alias say='echo "$1"'
+#alias say='echo "$1"'
+alias say='espeak -v us-mbrola-1 "$@"'

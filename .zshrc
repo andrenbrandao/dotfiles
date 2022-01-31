@@ -130,6 +130,11 @@ export PATH="$HOME/.serverless/bin:$PATH"
 # Add Android Studio
 export PATH="/usr/local/android-studio/bin:$PATH"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+# Export the Android SDK path
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # tabtab source for packages
 # uninstall by removing these lines
