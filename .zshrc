@@ -136,6 +136,12 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Mob Config
+# https://mob.sh/
+export MOB_WIP_BRANCH_QUALIFIER=decision
+export MOB_TIMER=10
+export MOB_TIMER_ROOM=decision
+
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
