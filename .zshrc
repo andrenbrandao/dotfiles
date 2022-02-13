@@ -139,8 +139,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Mob Config
 # https://mob.sh/
 export MOB_WIP_BRANCH_QUALIFIER=decision
-export MOB_TIMER=10
+export MOB_TIMER=25
 export MOB_TIMER_ROOM=decision
+export MOB_DONE_SQUASH=true
+export MOB_REQUIRE_COMMIT_MESSAGE=false
 
 # tabtab source for packages
 # uninstall by removing these lines
