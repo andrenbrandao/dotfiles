@@ -102,11 +102,11 @@ export PATH=$PATH:/usr/local/go/bin:/home/andrebrandao/go/bin:/home/andrebrandao
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -138,9 +138,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Mob Config
 # https://mob.sh/
-export MOB_WIP_BRANCH_QUALIFIER=decision
-export MOB_TIMER=25
-export MOB_TIMER_ROOM=decision
+export MOB_WIP_BRANCH_QUALIFIER=mob-team
+export MOB_TIMER=15
+export MOB_TIMER_ROOM=mob-team
 export MOB_DONE_SQUASH=true
 export MOB_REQUIRE_COMMIT_MESSAGE=false
 
