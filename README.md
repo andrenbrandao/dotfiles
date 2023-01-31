@@ -15,7 +15,7 @@ git clone --bare git@github.com:andrenbrandao/dotfiles.git $HOME/.dotfiles
 Define the dotfiles alias to use for now.
 
 ```
-alias dotfiles='/usr/bin/git --git-dir=$HOME/Dotfiles --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 ```
 
 Hide the untracked files and checkout the repo.
