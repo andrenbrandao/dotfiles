@@ -31,6 +31,12 @@ After installing `oh-my-zsh`, make a symbolic link for the `aliazes.zsh` file.
 ln -s ~/.aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 ```
 
+After installing `lvim`, make a symbolic link for the `config.lua` file.
+
+```
+ln -s ~/.lvim.config.lua ~/.config/lvim/config.lua
+```
+
 ## How to update
 
 Go to the current user and directory commit the files.
