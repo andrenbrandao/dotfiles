@@ -10,8 +10,14 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias neofetch='neofetch --colors 212 159 212 212 --ascii_colors 103 212 103 --color_blocks off'
 
 # ffmpeg video to gif
-function video2gif() {
+function ffvideo2gif() {
   ffmpeg -i $1 -r 15 -vf "scale=632:-1,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -ss 00:00:00 $2
+}
+
+# gifski video to gif
+# https://www.digitalocean.com/community/tutorials/how-to-make-and-optimize-gifs-on-the-command-line
+function video2gif() {
+  gifski --fps 15 --width 1200 -o gifski-sample.gif $1 && gifsicle -O3 --lossy=100 --colors 256 gifski-sample.gif -o $2 
 }
 
 # git
