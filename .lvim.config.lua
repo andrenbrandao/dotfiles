@@ -10,7 +10,7 @@ an executable
 --
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
+lvim.format_on_save.enabled = true
 lvim.colorscheme = "dracula"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
@@ -164,7 +164,17 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-    { "Mofiqul/dracula.nvim", }
+  { "Mofiqul/dracula.nvim", },
+  {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require 'hop'.setup()
+      vim.api.nvim_set_keymap("n", "S", ":HopChar2<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", "s", ":HopWord<cr>", { silent = true })
+    end
+  }
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
