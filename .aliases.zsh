@@ -23,3 +23,34 @@ function video2gif() {
 # git
 alias gprunesquashmerged='git checkout -q "$(git_main_branch)" && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base "$(git_main_branch)" $branch) && [[ $(git cherry "$(git_main_branch)" $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 alias gprunelocalmerged="git branch --merged '$(git_main_branch)' | grep -v '^[ *]*$(git_main_branch)$' | xargs git branch -d"
+
+# nvim
+function backup_nvim() {
+  # required
+  mv ~/.config/nvim{,.bak}
+
+  # optional but recommended
+  mv ~/.local/share/nvim{,.bak}
+  mv ~/.local/state/nvim{,.bak}
+  mv ~/.cache/nvim{,.bak}
+}
+
+function restore_nvim_backup() {
+  # required
+  cp -r ~/.config/nvim{.bak,}
+
+  # optional but recommended
+  cp -r ~/.local/share/nvim{.bak,}
+  cp -r ~/.local/state/nvim{.bak,}
+  cp -r ~/.cache/nvim{.bak,}
+}
+
+function clean_nvim() {
+  # required
+  rm -rf ~/.config/nvim
+
+  # optional but recommended
+  rm -rf ~/.local/share/nvim
+  rm -rf ~/.local/state/nvim
+  rm -rf ~/.cache/nvim
+}
