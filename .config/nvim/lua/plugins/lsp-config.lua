@@ -22,6 +22,10 @@ return {
 					require("neodev").setup()
 				end,
 			},
+
+      -- Useful status updates for LSP
+      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+      { 'j-hui/fidget.nvim', opts = {} },
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
