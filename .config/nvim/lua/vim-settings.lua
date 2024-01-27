@@ -26,3 +26,6 @@ vim.keymap.set("n", "J", "mzJ`z")
 -- center when going down or up
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+local discipline = require("discipline")
+discipline.cowboy()
