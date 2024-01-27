@@ -11,7 +11,5 @@ return {
         null_ls.builtins.completion.spell,
       },
     })
-
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
   end,
 }
