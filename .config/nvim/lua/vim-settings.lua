@@ -5,7 +5,8 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 
--- set relative numbers
+-- set number & relative numbers
+vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Save undo history
