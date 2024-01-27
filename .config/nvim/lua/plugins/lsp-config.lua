@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" },
+				ensure_installed = { "lua_ls", "tsserver" },
 			})
 		end,
 	},
@@ -23,9 +23,9 @@ return {
 				end,
 			},
 
-      -- Useful status updates for LSP
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+			-- Useful status updates for LSP
+			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
