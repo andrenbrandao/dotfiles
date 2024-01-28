@@ -3,6 +3,6 @@
 	email = andrenbrandao@gmail.com
 
 [core]
-	editor = vim
+	editor = nvim
 [init]
 	defaultBranch = main
