@@ -18,6 +18,8 @@ return {
 
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
+			vim.keymap.set("n", "<leader>sb", builtin.buffers, {})
+			vim.keymap.set("n", "<leader>sh", builtin.help_tags, {})
 
 			vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "[G]oto [D]efinition" })
 			vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "[G]oto [R]eferences" })
