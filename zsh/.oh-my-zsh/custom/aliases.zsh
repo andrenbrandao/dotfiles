@@ -51,3 +51,9 @@ function clean_nvim() {
   rm -rf ~/.local/state/nvim
   rm -rf ~/.cache/nvim
 }
+
+# copy command from history to clipboard
+# example clip !10555
+function clip() {
+  echo "$@" | xclip -sel clip
+}
