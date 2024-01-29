@@ -14,6 +14,7 @@ return {
 			-- Adds a number of user-friendly snippets
 			"rafamadriz/friendly-snippets",
 		},
+		event = { "InsertEnter", "CmdlineEnter" },
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
@@ -31,7 +32,7 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				completion = {
-					completeopt = "menu,menuone,noinsert",
+					completeopt = "menu,menuone,noselect,noinsert",
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-n>"] = cmp.mapping.select_next_item(),
@@ -39,9 +40,16 @@ return {
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete({}),
-					["<CR>"] = cmp.mapping.confirm({
-						behavior = cmp.ConfirmBehavior.Replace,
-						select = true,
+					["<CR>"] = cmp.mapping({
+						i = function(fallback)
+							if cmp.visible() and cmp.get_active_entry() then
+								cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+							else
+								fallback()
+							end
+						end,
+						s = cmp.mapping.confirm({ select = true }),
+						c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
 					}),
 					["<Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
