@@ -57,3 +57,6 @@ function clean_nvim() {
 function clip() {
   echo "$@" | xclip -sel clip
 }
+
+# play any audio file from terminal
+alias play='aplay'
