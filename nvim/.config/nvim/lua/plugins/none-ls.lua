@@ -22,7 +22,12 @@ return {
             group = "UserLspConfig",
             buffer = bufnr,
             callback = function()
-              vim.lsp.buf.format({ async = true })
+              vim.lsp.buf.format({
+                bufnr = bufnr,
+                filter = function(client)
+                  return client.name == "null-ls"
+                end,
+              })
             end,
           })
         end
