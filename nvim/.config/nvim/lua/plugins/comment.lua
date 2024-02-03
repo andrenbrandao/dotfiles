@@ -1,9 +1,13 @@
 -- "gc" to comment visual regions/lines
 return {
   "numToStr/Comment.nvim",
-  opts = {},
   config = function()
-    require("Comment").setup()
+    require("Comment").setup({
+      mappings = {
+        basic = false,
+        extra = false,
+      },
+    })
     local api = require("Comment.api")
 
     -- Toggle current line (linewise) using C-/
