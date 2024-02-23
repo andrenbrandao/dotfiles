@@ -25,6 +25,8 @@ cd ~/dotfiles
 
 ## References
 
+How I set up my terminal: [Terminal Setup with Zsh + Tmux + Dracula Theme](https://andrebrandao.me/articles/terminal-setup-with-zsh-tmux-dracula-theme/)
+
 Articles and other links that helped me create these dotfiles.
 
 - [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
