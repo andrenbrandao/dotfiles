@@ -2,6 +2,7 @@ return {
   "nvimtools/none-ls.nvim",
   config = function()
     local null_ls = require("null-ls")
+    local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
     null_ls.setup({
       sources = {
@@ -13,13 +14,13 @@ return {
         null_ls.builtins.completion.spell,
       },
 
-      -- code extracted from https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
+      -- code extracted from hhttps://github.com/nvimtools/none-ls.nvim/wiki/Formatting-on-save
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
           -- not sure if this group string is correct
-          vim.api.nvim_clear_autocmds({ group = "UserLspConfig", buffer = bufnr })
+          vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
           vim.api.nvim_create_autocmd("BufWritePre", {
-            group = "UserLspConfig",
+            group = augroup,
             buffer = bufnr,
             callback = function()
               vim.lsp.buf.format({
