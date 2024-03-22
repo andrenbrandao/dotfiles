@@ -60,3 +60,8 @@ function clip() {
 
 # play any audio file from terminal
 alias play='aplay'
+
+function compilec++() {
+  local filename="${1%.*}"
+  g++ -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion "$1" -o "$filename"
+}
