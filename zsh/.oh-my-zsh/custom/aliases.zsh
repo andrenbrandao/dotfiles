@@ -63,5 +63,5 @@ alias play='aplay'
 
 function compilec++() {
   local filename="${1%.*}"
-  g++ -pedantic-errors -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion "$1" -o "$filename"
+  g++ -std=c++23 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion "$1" -o "$filename"
 }
