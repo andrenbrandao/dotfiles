@@ -61,7 +61,9 @@ function clip() {
 # play any audio file from terminal
 alias play='aplay'
 
+# compiles c++ code
+# takes the first argument as the main.cpp and the remaining cpp files should come after it
 function compilec++() {
   local filename="${1%.*}"
-  g++ -std=c++23 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion "$1" -o "$filename"
+  g++ -std=c++23 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion "$@" -o "$filename"
 }
