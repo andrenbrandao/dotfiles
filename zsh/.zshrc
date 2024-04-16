@@ -78,16 +78,17 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(	
-	git
-	asdf
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	docker
-	colorize
-	colored-man-pages
-	fasd
-	tmux
-	mongocli
+  git
+  asdf
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  docker
+  colorize
+  colored-man-pages
+  fasd
+  tmux
+  mongocli
+  fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -147,3 +148,6 @@ export MOB_REQUIRE_COMMIT_MESSAGE=false
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+# fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
