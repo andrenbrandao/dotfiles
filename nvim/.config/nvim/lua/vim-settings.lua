@@ -32,9 +32,12 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Stay in visual mode while indenting
+-- stay in visual mode while indenting
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
+
+-- always copy to clipboard
+vim.opt.clipboard = "unnamedplus"
 
 local discipline = require("discipline")
 discipline.cowboy()
