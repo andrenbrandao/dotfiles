@@ -39,5 +39,9 @@ vim.keymap.set("v", ">", ">gv")
 -- always copy to clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- paste last copied line but do not yank current selection
+-- this will prevent pasting to replace what we had copied at first
+vim.keymap.set("v", "<leader>p", '"_dP')
+
 local discipline = require("discipline")
 discipline.cowboy()
