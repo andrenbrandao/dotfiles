@@ -122,6 +122,12 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+
+# Prevent shell closing with ctrl-d.
+# I would have this problem when going up and down
+# with vim motions and suddenly the terminal closed.
+setopt IGNORE_EOF
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
