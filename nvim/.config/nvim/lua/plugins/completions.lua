@@ -56,7 +56,7 @@ return {
               end
             end,
             s = cmp.mapping.confirm({ select = true }),
-            c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+            c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }), -- the documentation sets this to true, but causes this bug: https://github.com/hrsh7th/nvim-cmp/issues/1753
           }),
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
