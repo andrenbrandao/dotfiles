@@ -67,3 +67,7 @@ function compilec++() {
   local filename="${1%.*}"
   g++ -std=c++23 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion "$@" -o "$filename"
 }
+
+# ssh with xterm-256color to prevent problems such as 
+# “E437: terminal capability “cm” required”
+alias ssh='TERM=xterm-256color \ssh'
