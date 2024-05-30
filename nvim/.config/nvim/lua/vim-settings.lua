@@ -43,5 +43,6 @@ vim.opt.clipboard = "unnamedplus"
 -- this will prevent pasting to replace what we had copied at first
 vim.keymap.set("v", "<leader>p", '"_dP')
 
-local discipline = require("discipline")
-discipline.cowboy()
+-- Prevents user from keep pressing jk letters to navigate.
+-- local discipline = require("discipline")
+-- discipline.cowboy()

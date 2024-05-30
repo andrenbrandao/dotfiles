@@ -1,5 +1,7 @@
 local M = {}
 
+-- Prevents user from keep pressing jk letters to navigate.
+-- Taken from devaslife @ https://www.youtube.com/watch?v=fFHlfbKVi30
 function M.cowboy()
   ---@type table?
   local id
