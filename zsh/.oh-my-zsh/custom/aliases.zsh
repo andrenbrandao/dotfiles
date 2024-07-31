@@ -68,6 +68,12 @@ function compilec++() {
   g++ -std=c++23 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion "$@" -o "$filename"
 }
 
+# compiles c++ code and runs it
+function runc++() {
+  local filename="${1%.*}"
+  compilec++ $@ && ./"$filename"
+}
+
 # ssh with xterm-256color to prevent problems such as 
 # “E437: terminal capability “cm” required”
 alias ssh='TERM=xterm-256color \ssh'
