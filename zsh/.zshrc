@@ -157,3 +157,5 @@ export MOB_REQUIRE_COMMIT_MESSAGE=false
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. "$HOME/.cargo/env"

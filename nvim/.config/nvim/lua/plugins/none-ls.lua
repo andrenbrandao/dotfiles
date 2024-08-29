@@ -8,6 +8,7 @@ return {
           "prettier",
           "stylua",
           "buildifier",
+          "ruff",
         },
         automatic_installation = true,
       })

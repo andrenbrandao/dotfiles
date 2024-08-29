@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "html", "tsserver", "gopls", "clangd" },
+        ensure_installed = { "lua_ls", "html", "tsserver", "gopls", "clangd", "ruff", "pyright" },
       })
     end,
   },
@@ -54,6 +54,18 @@ return {
             gofumpt = true,
           },
         },
+      })
+      lspconfig.ruff.setup({
+        capabilities = capabilities,
+        trace = "messages",
+        init_options = {
+          settings = {
+            logLevel = "debug",
+          },
+        },
+      })
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
       })
 
       -- go autoimports
