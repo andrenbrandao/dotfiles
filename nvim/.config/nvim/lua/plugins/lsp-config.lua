@@ -115,7 +115,7 @@ return {
           vim.keymap.set(
             "n",
             "gd",
-            ":lua vim.lsp.buf.definition()<CR>zz",
+            [[:lua vim.lsp.buf.definition() vim.cmd('autocmd CursorMoved * ++once normal! zz')<CR>]],
             vim.tbl_extend("force", opts, { noremap = true, silent = true })
           )
           vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
