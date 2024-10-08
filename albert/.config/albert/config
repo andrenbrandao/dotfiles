@@ -1,0 +1,30 @@
+[General]
+hotkey=Alt+Space
+telemetry=true
+
+[applications]
+enabled=true
+
+[calculator_qalculate]
+enabled=true
+
+[snippets]
+enabled=true
+
+[system]
+enabled=true
+
+[widgetsboxmodel]
+alwaysOnTop=true
+clearOnHide=false
+clientShadow=true
+darkTheme=Yosemite Dark
+displayScrollbar=false
+followCursor=true
+hideOnFocusLoss=true
+historySearch=true
+itemCount=5
+lightTheme=Yosemite Dark
+quitOnClose=false
+showCentered=true
+systemShadow=true
