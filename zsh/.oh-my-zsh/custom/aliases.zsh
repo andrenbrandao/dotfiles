@@ -77,3 +77,8 @@ function runc++() {
 # ssh with xterm-256color to prevent problems such as 
 # “E437: terminal capability “cm” required”
 alias ssh='TERM=xterm-256color \ssh'
+
+# connect bluetooth headphone1
+alias bt1='echo "connect C8:2B:6B:62:BF:32" | bluetoothctl'
+# connect bluetooth heaphone2
+alias bt2='echo "connect E4:61:F4:17:53:81" | bluetoothctl'
