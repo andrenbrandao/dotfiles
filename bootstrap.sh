@@ -7,8 +7,6 @@ if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/dotfiles
 fi
 
-STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES
-
 pushd $DOTFILES
 
 # stow folders
@@ -18,6 +16,11 @@ do
     stow -D $folder
     stow $folder
 done
+
+# stow private dotfiles
+pushd "./private"
+./stow
+popd
 
 # stow X11 config
 echo "stow X11"
