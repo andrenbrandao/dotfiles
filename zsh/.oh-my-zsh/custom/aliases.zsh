@@ -79,6 +79,8 @@ function runc++() {
 alias ssh='TERM=xterm-256color \ssh'
 
 # connect bluetooth headphone1
-alias bt1='echo "connect C8:2B:6B:62:BF:32" | bluetoothctl'
+alias bt1='echo "connect E4:61:F4:17:53:81" | bluetoothctl'
 # connect bluetooth heaphone2
-alias bt2='echo "connect E4:61:F4:17:53:81" | bluetoothctl'
+alias bt2='echo "connect E4:61:F4:7F:9A:B0" | bluetoothctl'
+
+
