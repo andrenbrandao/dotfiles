@@ -27,8 +27,4 @@ echo "stow X11"
 sudo stow -D X11 --target=/ -v
 sudo stow X11 --target=/ -v
 
-# load gnome keybindings
-echo "loading gnome keybindings..."
-dconf load /org/gnome/shell/keybindings/ < ./gnome/keybindings.dconf
-
 popd
