@@ -159,3 +159,8 @@ export MOB_REQUIRE_COMMIT_MESSAGE=false
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"
+# BEGIN ANSIBLE MANAGED BLOCK
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# END ANSIBLE MANAGED BLOCK
