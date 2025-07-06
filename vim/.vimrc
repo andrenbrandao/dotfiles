@@ -24,6 +24,13 @@ nnoremap S :%s//g<Left><Left>
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
+  " create directories if they do not exist "
+  if empty(glob('~/.vim/tmp'))
+    silent !mkdir -p ~/.vim/tmp/{backup,swap}
+  endif
+  if empty(glob('~/.vim/undo'))
+    silent !mkdir -p ~/.vim/undo
+  endif
   set backup		" keep a backup file (restore to previous version)
   set backupdir=$HOME/.vim/tmp/backup
   set directory=$HOME/.vim/tmp/swap
