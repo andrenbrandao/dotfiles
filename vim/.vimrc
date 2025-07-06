@@ -56,9 +56,12 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" Keep visual selection when indenting"
+vnoremap < <gv
+vnoremap > >gv
+
 " Set relative number "
 set number
-
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
