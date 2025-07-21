@@ -89,6 +89,7 @@ plugins=(
   tmux
   mongocli
   fzf
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
