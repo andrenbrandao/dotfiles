@@ -13,8 +13,8 @@ pushd $DOTFILES
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     echo "stow $folder"
-    stow -D $folder
-    stow $folder
+    stow -D --target "$HOME" $folder
+    stow --target "$HOME" $folder
 done
 
 # stow private dotfiles
