@@ -17,11 +17,6 @@ do
     stow --target "$HOME" $folder
 done
 
-# stow private dotfiles
-pushd "./private"
-./stow
-popd
-
 # stow X11 config
 echo "stow X11"
 sudo stow -D X11 --target=/ -v
