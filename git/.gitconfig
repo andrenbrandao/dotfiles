@@ -1,8 +1,0 @@
-[user]
-	name = André Brandão
-	email = andrenbrandao@gmail.com
-
-[core]
-	editor = nvim
-[init]
-	defaultBranch = main
