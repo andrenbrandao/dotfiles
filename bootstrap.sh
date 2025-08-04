@@ -3,12 +3,6 @@ if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="nvim,vim,tmux,zsh,bin,guake,albert"
 fi
 
-if [[ -z $DOTFILES ]]; then
-    DOTFILES=$HOME/dotfiles
-fi
-
-pushd $DOTFILES
-
 # stow folders
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
@@ -21,5 +15,3 @@ done
 echo "stow X11"
 sudo stow -D X11 --target=/ -v
 sudo stow X11 --target=/ -v
-
-popd
