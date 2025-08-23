@@ -16,11 +16,11 @@ Clone repo to a new machine and store it in `~/dotfiles`.
 git clone https://github.com/andrenbrandao/dotfiles.git ~/dotfiles
 ```
 
-Run `bootstrap.sh` to symlink all the config with `stow`.
+Run `install.sh` to symlink all the config with `stow`.
 
 ```bash
 cd ~/dotfiles
-./bootstrap.sh
+./install.sh
 ```
 
 ## References
