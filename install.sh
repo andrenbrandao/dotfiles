@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="nvim,vim,tmux,zsh,bin,guake,albert"
+    STOW_FOLDERS="nvim,vim,tmux,zsh,bin,guake,albert,alacritty"
 fi
 
 # stow folders

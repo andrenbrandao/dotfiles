@@ -1,0 +1,6 @@
+[general]
+import = ["dracula.toml"]
+
+[window]
+decorations = "None"
+startup_mode = "Fullscreen"
