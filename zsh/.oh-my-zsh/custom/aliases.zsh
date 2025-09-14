@@ -85,3 +85,6 @@ alias bt2='echo "connect E4:61:F4:7F:9A:B0" | bluetoothctl'
 
 # restart pipewire attempting to fix volume controls for bluetooth
 alias fixvol='systemctl --user restart pipewire pipewire-pulse wireplumber'
+
+# map grep to ripgrep
+alias grep=rg
