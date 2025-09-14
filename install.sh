@@ -10,8 +10,3 @@ do
     stow -D --target "$HOME" $folder
     stow --target "$HOME" $folder
 done
-
-# stow X11 config
-echo "stow X11"
-sudo stow -D X11 --target=/ -v
-sudo stow X11 --target=/ -v
