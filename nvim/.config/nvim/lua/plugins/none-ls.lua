@@ -9,6 +9,7 @@ return {
           "stylua",
           "buildifier",
           "ruff",
+          "cmakelang",
         },
         automatic_installation = true,
       })

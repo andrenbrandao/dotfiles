@@ -9,7 +9,17 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "html", "tsserver", "gopls", "clangd", "ruff", "pyright", "rust_analyzer" },
+        ensure_installed = {
+          "lua_ls",
+          "html",
+          "tsserver",
+          "gopls",
+          "clangd",
+          "cmake",
+          "ruff",
+          "pyright",
+          "rust_analyzer",
+        },
       })
     end,
   },
@@ -41,6 +51,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.clangd.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.cmake.setup({
         capabilities = capabilities,
       })
       lspconfig.gopls.setup({
