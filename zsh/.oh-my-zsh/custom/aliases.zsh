@@ -82,6 +82,9 @@ alias ssh='TERM=xterm-256color \ssh'
 alias bt1='echo "connect E4:61:F4:17:53:81" | bluetoothctl'
 # connect bluetooth heaphone2
 alias bt2='echo "connect E4:61:F4:7F:9A:B0" | bluetoothctl'
+# connect bluetooth headphone2
+alias bt3='echo "connect E4:61:F4:7F:A3:9E" | bluetoothctl'
+
 
 # restart pipewire attempting to fix volume controls for bluetooth
 alias fixvol='systemctl --user restart pipewire pipewire-pulse wireplumber'
